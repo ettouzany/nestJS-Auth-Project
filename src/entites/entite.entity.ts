@@ -2,17 +2,17 @@ import { User } from "src/auth/user.entity";
 import { BaseEntity, Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
-export class Course extends BaseEntity{
+export class Entite extends BaseEntity{
     @PrimaryGeneratedColumn()
     id: number;
 
     @Column()
-    title: string;
+    nom: string;
 
     @Column()
-    description: string;
+    code: string;
 
-    @ManyToOne(type => User, user=>user.courses,{eager:false})
+    @ManyToOne(type => User, user=>user.entites,{eager:false})
     user: User;
 
     @Column()
