@@ -27,5 +27,4 @@ export class AuthController {
     test(@GetUser() user:User){
         return user;
     }
-
 }
